@@ -1,0 +1,181 @@
+body{
+    background: url(./images/img.jpg) no-repeat right top;
+    background-size: cover;
+    margin:0px;
+    padding:0px;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;  
+    font-family: 'REM', sans-serif;
+}
+/* todo-body style */
+#todo{
+    height:50vh;
+    padding: 1.5rem;
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: rgb(243, 240, 240);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+}
+#complete{
+    display: flex;
+    margin-top: 0.4rem;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+}
+#complete>div{
+    cursor: pointer;
+}
+/* input text style and fav-icon style*/
+#input-container{
+    opacity: 0.74;
+    position: relative;
+    padding-bottom: 1rem;
+} 
+#todo-work{
+    width: inherit;
+    border-radius: 0.4rem;
+    padding: 1.2rem;
+    margin: 0.5rem;
+} 
+#input-container > i {
+    position: absolute;
+    top: 12px;
+    font-size:larger;
+    padding: 0.9rem;
+    opacity: 0.4;
+    left: 0.6rem;
+    padding-top: 1.2rem;
+}
+#input-container > input {
+    padding-left: 40px;
+    font-size:1.1rem;
+    font-weight:bold;
+    font-family: 'REM', sans-serif;
+    background-color: rgb(198, 194, 194);
+ }
+ /* tasks */
+ #devide{
+  width: 90%;
+  opacity: 0.4;
+  border-bottom: 2px solid rgb(53, 50, 50) ;
+ }
+ #tasks{
+    width: 90%;
+    padding-top:1rem;
+    overflow:auto;
+    overflow-x: hidden;
+    flex-shrink:1;
+ }
+
+ /* radio button styles */
+.container {
+    font-weight: bolder;
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background-color: #565555;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 4px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+  /* scroll bar stylling */
+  #tasks::-webkit-scrollbar {
+    width: 2px;
+    height: 20px;
+  }
+
+#tasks::-webkit-scrollbar-track {
+    background: rgb(179, 177, 177);
+    border-radius: 5px;
+}
+
+#tasks::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+    border-radius:5px;
+    height: 5px;
+  }
+
+  #tasks::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 5px;
+  }
+
+  #tasks::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 5px;
+  }
+  #tasks::-webkit-scrollbar-track {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* features */
+#features{
+    position: absolute;
+    bottom:95%;
+    font-size:10px;
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    
+}
+#features span{
+    padding-top: 10px;
+    cursor: pointer;
+}
